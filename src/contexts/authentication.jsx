@@ -19,7 +19,7 @@ function AuthProvider(props) {
   const login = async (data) => {
     try {
       setIsLoading(true);
-      const result = await axios.post("https://fullstack-block-post-project-server.vercel.app/api/login", data);
+      const result = await axios.post("https://backend-api-deploy-phi.vercel.app/auth/login", data);
       const token = result.data.token;
       localStorage.setItem("token", token);
       const userDataFromToken = jwtDecode(token);
@@ -44,7 +44,7 @@ function AuthProvider(props) {
   const register = async (data) => {
     try {
       setIsLoading(true);
-      await axios.post("https://fullstack-block-post-project-server.vercel.app/api/register", data);
+      await axios.post("https://backend-api-deploy-phi.vercel.app/auth/register", data);
       setIsLoading(false);
       toast.success("Success");
       setTimeout(function () {

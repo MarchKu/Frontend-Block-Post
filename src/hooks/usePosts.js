@@ -15,7 +15,7 @@ const usePosts = () => {
     try {
       setIsError(false);
       setIsLoading(true);
-      const results = await axios.get(`https://fullstack-block-post-project-server.vercel.app/api/posts`);
+      const results = await axios.get(`https://backend-api-deploy-phi.vercel.app/posts`);
       setPosts(results.data);
       setIsLoading(false);
     } catch (error) {
@@ -29,7 +29,7 @@ const usePosts = () => {
     try {
       setIsError(false);
       setIsLoading(true);
-      await axios.delete(`https://fullstack-block-post-project-server.vercel.app/api/posts/${postId}`);
+      await axios.delete(`https://backend-api-deploy-phi.vercel.app/posts/${postId}`);
       const newPosts = posts.filter((post) => {
         return post.post_id !== postId;
       });
@@ -45,7 +45,7 @@ const usePosts = () => {
     try {
       setIsError(false);
       setIsLoading(true);
-      const result = await axios.get(`https://fullstack-block-post-project-server.vercel.app/api/posts/${postId}`);
+      const result = await axios.get(`https://backend-api-deploy-phi.vercel.app/posts/${postId}`);
       setPost(result.data[0]);
       setIsLoading(false);
     } catch (error) {
@@ -59,7 +59,7 @@ const usePosts = () => {
     try {
       setIsError(false);
       setIsLoading(true);
-      await axios.post(`https://fullstack-block-post-project-server.vercel.app/api/posts`, data);
+      await axios.post(`https://backend-api-deploy-phi.vercel.app/posts`, data);
       setIsLoading(false);
       toast.success("Post update successfully.");
       setTimeout(function () {
@@ -77,7 +77,7 @@ const usePosts = () => {
     try {
       setIsError(false);
       setIsLoading(true);
-      await axios.put(`https://fullstack-block-post-project-server.vercel.app/api/posts/${data.id}`, data);
+      await axios.put(`https://backend-api-deploy-phi.vercel.app/posts/${data.id}`, data);
       setIsLoading(false);
       toast.success("Post update successfully.");
       setTimeout(function () {
