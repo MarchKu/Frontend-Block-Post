@@ -22,7 +22,7 @@ function LoginPage() {
     <>
       <section className="w-full h-screen flex flex-col justify-center items-center">
         <form
-          className="login-form size-[20%] min-w-[450px] bg-slate-400 flex flex-col justify-center items-center rounded-lg gap-[1.5rem] py-[1rem] px-[1rem]"
+          className="login-form min-w-[450px] min-h-[270px]  bg-slate-400 flex flex-col justify-center items-center rounded-lg gap-[1.5rem] py-[1rem] px-[1rem]"
           onSubmit={handleSubmit}
         >
           <h1 className="font-bold text-[2rem]">Login </h1>

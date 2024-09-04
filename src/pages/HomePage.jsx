@@ -18,9 +18,9 @@ function HomePage() {
     const newDate = new Date(date);
     const postDate =
       Math.floor((currentDate - newDate) / (1000 * 60 * 60 * 24)) - 5;
-    if (postDate === 0) {
+    if (postDate < 1) {
       return "today";
-    } else if (postDate === 1) {
+    } else if (postDate > 1 && postDate <=2 ) {
       return "yesterday";
     } else if(postDate > 1)  {
       return `${postDate} ago `;
